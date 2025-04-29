@@ -1,10 +1,10 @@
 <?php
 
-namespace Italofantone\Slugable;
+namespace Italofantone\Sluggable;
 
 use Illuminate\Support\ServiceProvider;
 
-class SlugableServiceProvider extends ServiceProvider
+class SluggableServiceProvider extends ServiceProvider
 {
     /**
      * Register services.
@@ -12,7 +12,7 @@ class SlugableServiceProvider extends ServiceProvider
     public function register(): void
     {
         $this->mergeConfigFrom(
-            __DIR__.'/../config/slugable.php', 'slugable'
+            __DIR__.'/../config/sluggable.php', 'sluggable'
         );
     }
 
@@ -22,7 +22,7 @@ class SlugableServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->publishes([
-            __DIR__.'/../config/slugable.php' => config_path('slugable.php'),
-        ], 'slugable-config');
+            __DIR__.'/../config/sluggable.php' => config_path('sluggable.php'),
+        ], 'sluggable-config');
     }
 }
