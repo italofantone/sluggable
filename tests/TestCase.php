@@ -1,8 +1,8 @@
 <?php
 
-namespace Italofantone\Slugable\Tests;
+namespace Italofantone\Sluggable\Tests;
 
-use Italofantone\Slugable\SlugableServiceProvider;
+use Italofantone\Sluggable\SluggableServiceProvider;
 
 class TestCase extends \Orchestra\Testbench\TestCase
 {
@@ -12,7 +12,7 @@ class TestCase extends \Orchestra\Testbench\TestCase
 
         $this->loadMigrationsFrom(__DIR__ . '/database/migrations');
 
-        $this->app->register(SlugableServiceProvider::class);        
+        $this->app->register(SluggableServiceProvider::class);        
     }
 
     // ...

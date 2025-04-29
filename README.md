@@ -1,4 +1,4 @@
-# About Slugable
+# About Sluggable
 
 Is a PHP library designed to simplify and automate the creation of URL-friendly slugs based on Laravel.
 
@@ -6,29 +6,29 @@ Is a PHP library designed to simplify and automate the creation of URL-friendly 
 
 ### Installation
 
-You can install the slugable package via composer. Run the following command:
+You can install the sluggable package via composer. Run the following command:
 
 ```
-composer require italofantone/slugable
+composer require italofantone/sluggable
 ```
 
 ### Usage
 
 1. Add the trait to your model:
 
-To use the Slugable functionality, include the Slugable trait in your Eloquent model. Here's an example:
+To use the Sluggable functionality, include the Sluggable trait in your Eloquent model. Here's an example:
 
 ```
 <?php
 
 namespace App\Models;
 
-use Italofantone\Slugable\Slugable;
+use Italofantone\Sluggable\Sluggable;
 use Illuminate\Database\Eloquent\Model;
 
 class Lesson extends Model
 {
-    use Slugable;
+    use Sluggable;
 
     protected $fillable = ['title', 'body'];
 }
@@ -74,10 +74,10 @@ return new class extends Migration
 2. Customize the separator: Run the following command.
 
 ```
-php artisan vendor:publish --tag=slugable-config
+php artisan vendor:publish --tag=sluggable-config
 ```
 
-You can customize the slug separator in the `config/slugable.php` file. For example:
+You can customize the slug separator in the `config/sluggable.php` file. For example:
 
 ```
 <?php
@@ -111,12 +111,12 @@ To use the name attribute instead of the default attribute (like title), do the 
 
 namespace App\Models;
 
-use Italofantone\Slugable\Slugable;
+use Italofantone\Sluggable\Sluggable;
 use Illuminate\Database\Eloquent\Model;
 
 class Lesson extends Model
 {
-    use Slugable;
+    use Sluggable;
 
     protected $fillable = ['name', 'body'];
 

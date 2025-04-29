@@ -1,13 +1,13 @@
 <?php
 
-namespace Italofantone\Slugable\Tests;
+namespace Italofantone\Sluggable\Tests;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Italofantone\Slugable\Tests\Models\TestModel;
+use Italofantone\Sluggable\Tests\Models\TestModel;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Str;
 
-class SlugableTest extends TestCase
+class SluggableTest extends TestCase
 {
     use RefreshDatabase;
 
@@ -76,7 +76,7 @@ class SlugableTest extends TestCase
 
     public function test_it_generates_slug_with_custom_separator_on_create()
     {
-        Config::set('slugable.separator', '+');
+        Config::set('sluggable.separator', '+');
 
         $title = 'My First Model';
 

@@ -3,7 +3,7 @@
     colors="true" 
 >
     <testsuites>
-        <testsuite name="Slugable Test Suite">
+        <testsuite name="Sluggable Test Suite">
             <directory suffix="Test.php">./tests</directory>
         </testsuite>
     </testsuites>

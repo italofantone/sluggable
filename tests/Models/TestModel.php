@@ -1,13 +1,13 @@
 <?php
 
-namespace Italofantone\Slugable\Tests\Models;
+namespace Italofantone\Sluggable\Tests\Models;
 
-use Italofantone\Slugable\Slugable;
+use Italofantone\Sluggable\Sluggable;
 use Illuminate\Database\Eloquent\Model;
 
 class TestModel extends Model
 {
-    use Slugable;
+    use Sluggable;
 
     protected $fillable = ['title'];
 

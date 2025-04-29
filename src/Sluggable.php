@@ -1,14 +1,14 @@
 <?php
 
-namespace Italofantone\Slugable;
+namespace Italofantone\Sluggable;
 
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
 use InvalidArgumentException;
 
-trait Slugable
+trait Sluggable
 {
-    public static function bootSlugable()
+    public static function bootSluggable()
     {
         static::creating(function (Model $model) {
             $model->generateSlug();            
@@ -27,7 +27,7 @@ trait Slugable
             throw new InvalidArgumentException("The field [{$field}] is not fillable.");
         }
 
-        $separator = config('slugable.separator');
+        $separator = config('sluggable.separator');
         $slug = Str::slug($this->{$field}, $separator);
         $originalSlug = $slug;
 
